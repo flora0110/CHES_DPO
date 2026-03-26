@@ -231,16 +231,3 @@
 | :--- | ----------: | ----------: | -----------------------: |
 | **DPO_RN1** | **0.9138** | **0.1841** | **2209.8** |
 | **Min_ln_ches** | **0.9286** | **0.1627** | **1952.2** |
-
-
-- adaptive
-    - 先看head/tail比例
-        - 照dataset比例sample, plot 
-    - tail: ches pick 
-    - head: RN pick
-    - COLM: March 31, May 22 出分
-    - ARR May 25
-
-- clusterexposure-> COLM workshop(4月？)
-
-- pre-doc
