@@ -47,19 +47,19 @@ def main(
     print(f"Loading Similarity Chunks from {similarity_chunk_dir}...")
     
     all_similarity_items = [] # [新增] 用來儲存所有 chunk 的資料列表
-    # chunk_files = sorted(glob.glob(os.path.join(similarity_chunk_dir, f"{data_type}_item_pref_similarity_chunk*.json")))
+    chunk_files = sorted(glob.glob(os.path.join(similarity_chunk_dir, f"{data_type}_item_pref_similarity_chunk*.json")))
     
-    # for chunk_file in tqdm(chunk_files, desc="Reading Chunks"):
-    #     with open(chunk_file, 'r') as f:
-    #         chunk_data = json.load(f)
-    #         # 直接將資料加入總列表
-    #         all_similarity_items.extend(chunk_data)
+    for chunk_file in tqdm(chunk_files, desc="Reading Chunks"):
+        with open(chunk_file, 'r') as f:
+            chunk_data = json.load(f)
+            # 直接將資料加入總列表
+            all_similarity_items.extend(chunk_data)
 
-    chunk_file = os.path.join(similarity_chunk_dir, f"{data_type}_item_pref_similarity.json")
-    with open(chunk_file, 'r') as f:
-        chunk_data = json.load(f)
-        # 直接將資料加入總列表
-        all_similarity_items.extend(chunk_data)
+    # chunk_file = os.path.join(similarity_chunk_dir, f"{data_type}_item_pref_similarity.json")
+    # with open(chunk_file, 'r') as f:
+    #     chunk_data = json.load(f)
+    #     # 直接將資料加入總列表
+    #     all_similarity_items.extend(chunk_data)
 
     # [修改] 步驟 2: 直接處理 Similarity Data (不需對齊 SFT)
     print(f"Processing {len(all_similarity_items)} items...")

@@ -1,0 +1,36 @@
+[
+  {
+    "model": "./experiments/predicts/Goodreads_1e-6/it3/nearest_ln_ches_scores/predicts.json",
+    "NDCG": [
+      0.030019586602231637
+    ],
+    "HR": [
+      0.03970339778486953
+    ],
+    "diversity": [
+      1287
+    ],
+    "DivRatio": 0.024189455878206936,
+    "ORRatio": 0.09935156470256555
+  },
+  {
+    "model": "./experiments/predicts/Goodreads_1e-6/it3/nearest_ln_ches_scores/predicts.json",
+    "category": "Goodreads",
+    "NDCG_head@5": 0.049388460152051214,
+    "HR_head@5": 0.06257867290055745,
+    "NDCG_tail@5": 0.008893592274531344,
+    "HR_tail@5": 0.014763779527559055,
+    "Count_Head": 5561,
+    "Count_Tail": 5080
+  },
+  {
+    "model": "nearest_ln_ches_scores",
+    "category": "Goodreads",
+    "topk": 5,
+    "GiniIndex": 0.9831925401880754,
+    "num_recommended_unique": 1287,
+    "total_recommendations": 53270,
+    "num_total_items": 13111,
+    "coverage": 0.09816184882922736
+  }
+]

@@ -8,3 +8,4 @@ __pycache__/
 training_args.bin
 experiments/models/*
 data_sprec/*
+**/*_old/*

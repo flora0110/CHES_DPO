@@ -1,5 +1,6 @@
 gpu1=$1;
-its=$2
+its=$2;
+
 train_sample_size=2048;valid_sample_size=256
 # base_model="/scratch/user/chuanhsin0110/hf_models/Llama-3.2-1B-Instruct/"
 base_model="meta-llama/Llama-3.2-1B-Instruct"
@@ -11,7 +12,7 @@ metric_for_best_model="accuracies"
 metric_for_best_model_key="eval_rewards/${metric_for_best_model}"
 greater_is_better=True
 
-for category in "Goodreads"
+for category in "MovieLens"
 do
     echo ----------------- Training $category with DPO starting! -----------------
     if [ "$category" == "Goodreads" ]; then
@@ -34,7 +35,7 @@ do
 
     
     train_data_for_head_tail="../SPRec/data/${category}/train.json"
-    for ((i=2;i<$its;i++))
+    for ((i=0;i<$its;i++))
     do
         echo ----------------- Iteration$i starts! -----------------
         model_it_dir="./experiments/models/${category}_${lr}/it${i}"
@@ -54,7 +55,7 @@ do
         echo "id2name_path: $id2name_path"
         echo "name2id_path: $name2id_path"
         echo "embeddings_path: $embeddings_path"     
-        for metric in "DPO_RN1" "SPRec"
+        for metric in "Min_ln_ches_scores"
         do
             
             
@@ -137,7 +138,7 @@ do
         done
     done
 
-    for metric in "DPO_RN1" "SPRec"
+    for metric in "Min_ln_ches_scores"
     do
         echo "----------------- Aggregating eval_top5.json for metric: ${metric} -----------------"
         python ./src/evaluate/agg_eval.py "./experiments/metrics/${category}_${lr}" "$metric" > ""./experiments/metrics/${category}_${lr}/${metric}_head_tail_top5_table.md"
