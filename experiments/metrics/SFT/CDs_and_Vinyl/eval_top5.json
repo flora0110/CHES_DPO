@@ -1,0 +1,16 @@
+[
+  {
+    "model": "./experiments/predicts/SFT/CDs_and_Vinyl/predicts.json",
+    "NDCG": [
+      0.010761859507142917
+    ],
+    "HR": [
+      0.012
+    ],
+    "diversity": [
+      1285
+    ],
+    "DivRatio": 0.2614445574771109,
+    "ORRatio": 0.09643947100712105
+  }
+]

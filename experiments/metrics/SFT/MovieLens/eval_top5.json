@@ -1,0 +1,16 @@
+[
+  {
+    "model": "./experiments/predicts/SFT/MovieLens/predicts.json",
+    "NDCG": [
+      0.00904150157509183
+    ],
+    "HR": [
+      0.012
+    ],
+    "diversity": [
+      648
+    ],
+    "DivRatio": 0.1296,
+    "ORRatio": 0.1032
+  }
+]
