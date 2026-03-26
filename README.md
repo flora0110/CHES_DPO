@@ -84,7 +84,6 @@
 | Min_ln_CHES | 0.9875 | 0.0490 | 641.8 |
 
 # Origin dataset
-# 0305
 
 <!-- ## re-run
 | SampleMethod                         | MGU@5 ↓                  | DGU@5 ↓                  | DivRatio@5 ↑            | ORRatio@5 ↓             | NDCG@5 ↑                 | HR@5 ↑                  |
