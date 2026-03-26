@@ -1,0 +1,36 @@
+[
+  {
+    "model": "./experiments/predicts/MovieLens_1e-6/it2/DPO_RN1/predicts.json",
+    "NDCG": [
+      0.00852371901428583
+    ],
+    "HR": [
+      0.01
+    ],
+    "diversity": [
+      644
+    ],
+    "DivRatio": 0.1288,
+    "ORRatio": 0.1252
+  },
+  {
+    "model": "./experiments/predicts/MovieLens_1e-6/it2/DPO_RN1/predicts.json",
+    "category": "MovieLens",
+    "NDCG_head@5": 0.012282015870728863,
+    "HR_head@5": 0.01440922190201729,
+    "NDCG_tail@5": 0.0,
+    "HR_tail@5": 0.0,
+    "Count_Head": 694,
+    "Count_Tail": 306
+  },
+  {
+    "model": "DPO_RN1",
+    "category": "MovieLens",
+    "topk": 5,
+    "GiniIndex": 0.987648844481733,
+    "num_recommended_unique": 644,
+    "total_recommendations": 5000,
+    "num_total_items": 13111,
+    "coverage": 0.04911906033101975
+  }
+]

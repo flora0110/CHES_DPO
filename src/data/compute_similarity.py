@@ -140,16 +140,37 @@ def main():
 
     # ==== 3) 讀 GoodReads data & id2name ====
 
+    # print(f"Loading data from {args.data_path}")
+    # data = []
+    # if args.data_path and os.path.exists(args.data_path):
+    #     with open(args.data_path, 'r') as f:
+    #         for line in f:
+    #             if line.strip():
+    #                 data.append(json.loads(line))
+    # else:
+    #     # 如果沒有 valid file，可以設為空列表或拋出異常，這裡假設可能為空
+    #     print(f"Warning: SFT Valid file not found: {args.data_path}")
+
     print(f"Loading data from {args.data_path}")
     data = []
-    if args.data_path and os.path.exists(args.data_path):
-        with open(args.data_path, 'r') as f:
-            for line in f:
-                if line.strip():
-                    data.append(json.loads(line))
-    else:
-        # 如果沒有 valid file，可以設為空列表或拋出異常，這裡假設可能為空
-        print(f"Warning: SFT Valid file not found: {args.data_path}")
+    try:
+        if args.data_path.endswith(".jsonl"):
+            with open(args.data_path, 'r') as f:
+                for line in f:
+                    if line.strip():
+                        data.append(json.loads(line))
+        elif args.data_path.endswith(".json"):
+            with open(args.data_path, 'r') as f:
+                loaded = json.load(f)
+                # 如果是 list
+                if isinstance(loaded, list):
+                    data.extend(loaded)
+                else:
+                    raise ValueError("Expected a list of data points in the JSON file.")
+        else:
+                raise ValueError("Unsupported file format")
+    except Exception as e:
+        print(f"Error occurred while loading data: {e}")
     # with open(args.data_path, "r", encoding="utf-8") as f:
     #     data = json.load(f)
 
@@ -299,6 +320,8 @@ def main():
 
         json_chunk.append({
             "prompt": instruction_text+input_text,
+            "instruction": instruction_text,
+            "input": input_text,
             "chosen": example["output"],
             "random_candidates": list(ches_scores.keys()),
             "minus_normalized_edit_distances": minus_norm_ed,

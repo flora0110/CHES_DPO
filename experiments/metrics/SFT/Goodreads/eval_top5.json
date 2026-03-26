@@ -1,0 +1,16 @@
+[
+  {
+    "model": "./experiments/predicts/SFT/Goodreads/predicts.json",
+    "NDCG": [
+      0.022619082971107263
+    ],
+    "HR": [
+      0.03
+    ],
+    "diversity": [
+      572
+    ],
+    "DivRatio": 0.1144,
+    "ORRatio": 0.0752
+  }
+]

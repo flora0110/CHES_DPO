@@ -2,15 +2,15 @@
   {
     "model": "./experiments/predicts/SFT/CDs_and_Vinyl/predicts.json",
     "NDCG": [
-      0.010761859507142917
+      0.00857938887245085
     ],
     "HR": [
-      0.012
+      0.011
     ],
     "diversity": [
-      1285
+      1179
     ],
-    "DivRatio": 0.2614445574771109,
-    "ORRatio": 0.09643947100712105
+    "DivRatio": 0.23987792472024416,
+    "ORRatio": 0.15442522889114954
   }
 ]

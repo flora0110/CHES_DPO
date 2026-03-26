@@ -1,0 +1,12 @@
+## Head/Tail @5
+
+| it | NDCG_head@5 | HR_head@5 | NDCG_tail@5 | HR_tail@5 |
+| ----------- | ----------: | ----------: | ----------: | ----------: |
+| **Average** | **nan** | **nan** | **nan** | **nan** |
+
+
+## Overall metrics
+
+| it | DivRatio ↑ | ORRatio ↓ | MGU ↓ | DGU ↓ | HR ↑ | NDCG ↑ |
+| ----------- | ----------: | ----------: | ----------: | ----------: | ----------: | ----------: |
+| **Average** | **nan** | **nan** | **nan** | **nan** | **nan** |

@@ -2,15 +2,15 @@
   {
     "model": "./experiments/predicts/SFT/Steam/predicts.json",
     "NDCG": [
-      0.00956160631164485
+      0.009984024240491392
     ],
     "HR": [
-      0.011
+      0.014
     ],
     "diversity": [
-      874
+      1210
     ],
-    "DivRatio": 0.1748,
-    "ORRatio": 0.1796
+    "DivRatio": 0.242,
+    "ORRatio": 0.0846
   }
 ]

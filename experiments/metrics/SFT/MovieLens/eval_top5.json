@@ -2,15 +2,15 @@
   {
     "model": "./experiments/predicts/SFT/MovieLens/predicts.json",
     "NDCG": [
-      0.00904150157509183
+      0.007892789260714373
     ],
     "HR": [
-      0.012
+      0.009
     ],
     "diversity": [
-      648
+      638
     ],
-    "DivRatio": 0.1296,
-    "ORRatio": 0.1032
+    "DivRatio": 0.1276,
+    "ORRatio": 0.1294
   }
 ]

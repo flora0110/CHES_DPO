@@ -1,0 +1,36 @@
+[
+  {
+    "model": "./experiments/predicts/CDs_and_Vinyl_1e-6/it0/DPO_RN1/predicts.json",
+    "NDCG": [
+      0.0106409951840957
+    ],
+    "HR": [
+      0.014
+    ],
+    "diversity": [
+      1268
+    ],
+    "DivRatio": 0.2579857578840285,
+    "ORRatio": 0.1269582909460834
+  },
+  {
+    "model": "./experiments/predicts/CDs_and_Vinyl_1e-6/it0/DPO_RN1/predicts.json",
+    "category": "CDs_and_Vinyl",
+    "NDCG_head@5": 0.014038876889848815,
+    "HR_head@5": 0.01511879049676026,
+    "NDCG_tail@5": 0.007963452277107116,
+    "HR_tail@5": 0.013461538461538462,
+    "Count_Head": 463,
+    "Count_Tail": 520
+  },
+  {
+    "model": "DPO_RN1",
+    "category": "CDs_and_Vinyl",
+    "topk": 5,
+    "GiniIndex": 0.966299809320418,
+    "num_recommended_unique": 1282,
+    "total_recommendations": 5000,
+    "num_total_items": 13111,
+    "coverage": 0.09778048966516666
+  }
+]

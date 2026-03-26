@@ -1,0 +1,36 @@
+[
+  {
+    "model": "./experiments/predicts/CDs_and_Vinyl_1e-6/it1/SPRec/predicts.json",
+    "NDCG": [
+      0.008148712314377457
+    ],
+    "HR": [
+      0.01
+    ],
+    "diversity": [
+      1215
+    ],
+    "DivRatio": 0.24720244150559512,
+    "ORRatio": 0.14018311291963378
+  },
+  {
+    "model": "./experiments/predicts/CDs_and_Vinyl_1e-6/it1/SPRec/predicts.json",
+    "category": "CDs_and_Vinyl",
+    "NDCG_head@5": 0.011879049676025918,
+    "HR_head@5": 0.012958963282937365,
+    "NDCG_tail@5": 0.005093677527648955,
+    "HR_tail@5": 0.007692307692307693,
+    "Count_Head": 463,
+    "Count_Tail": 520
+  },
+  {
+    "model": "SPRec",
+    "category": "CDs_and_Vinyl",
+    "topk": 5,
+    "GiniIndex": 0.9689720082373579,
+    "num_recommended_unique": 1227,
+    "total_recommendations": 5000,
+    "num_total_items": 13111,
+    "coverage": 0.09358553886049882
+  }
+]
