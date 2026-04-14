@@ -1,5 +1,11 @@
 # CHES_DPO
 
+## 0414
+- Wait to Solve: new Dataset, Origin Dataset num_recommended_unique 差很多問題 （Goodreads lr 1e-6, MovieLens lr 1e-6 new都少一半）
+    - 看看shell(是否都是多epoch early stop), 使用的code(evaluate), dataset, eval dataset(sentence bert用一樣的嗎) 
+-  Wait to Solve: new Dataset, Origin Dataset RN1 HR差很多問題
+
+
 ## Goodreads lr 1e-6
 
 | Method | NDCG_head@5 | HR_head@5 | NDCG_tail@5 | HR_tail@5 |
@@ -36,7 +42,6 @@
 
 
 
-
 | it | DivRatio ↑ | ORRatio ↓ | HR ↑ | NDCG ↑ |
 | ----------- | ----------: | ----------: | ----------: | ----------: |
 | without DPO | 0.127 | 0.1294 | 0.009 | 0.0079 |
@@ -44,7 +49,7 @@
 | SPRec |0.18168 | 0.04392 | **0.00880** | 0.00701 |
 | Min_ln_CHES | 0.13388 | 0.08792  | **0.00880** | **0.00705** |
 
-
+- head acc != HR ?
 
 
 | its | GiniIndex ↓ | coverage ↑ | num_recommended_unique ↑ |
@@ -236,3 +241,16 @@
 | :--- | ----------: | ----------: | -----------------------: |
 | **DPO_RN1** | **0.9138** | **0.1841** | **2209.8** |
 | **Min_ln_ches** | **0.9286** | **0.1627** | **1952.2** |
+
+
+- check origin/new codes diff
+
+- MovieLens lr -> 1e-4
+
+- train: origin_train[:-2], origin_valid[:-2], origin_test[:-3]
+- valid: origin_train[-1], origin_valid[-1], origin_test[-2]
+- test: origin_test[-1]
+
+- base on if chosen is popular or not -> random/min ches
+    - history popular
+    - chosen popular
