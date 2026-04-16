@@ -1,5 +1,14 @@
 # CHES_DPO
 
+### seed 42
+SFT HR: 0.03
+![HR line](./centered_percentile_pair_experiments/Goodreads/summary_results/plots/line/line_HR.png).
+![Hdelta_HRe](./centered_percentile_pair_experiments/Goodreads/summary_results/plots/line/delta_line_HR.png).
+
+![sequence_logprob_margin_errorbar](./centered_percentile_pair_experiments/Goodreads/summary_plots/sequence_logprob_margin_errorbar.png).
+
+![ln_ches_score](./centered_percentile_pair_experiments/Goodreads/summary_plots/ln_ches_score_errorbar.png).
+
 ### seed 0
 
 SFT HR: 0.023
@@ -20,14 +29,7 @@ SFT HR: 0.041
 
 ![ln_ches_score](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed0/summary_plots/ln_ches_score_errorbar.png).
 
-### seed 42
-SFT HR: 0.03
-![HR line](./centered_percentile_pair_experiments/Goodreads/summary_results/plots/line/line_HR.png).
-![Hdelta_HRe](./centered_percentile_pair_experiments/Goodreads/summary_results/plots/line/delta_line_HR.png).
 
-![sequence_logprob_margin_errorbar](./centered_percentile_pair_experiments/Goodreads/summary_plots/sequence_logprob_margin_errorbar.png).
-
-![ln_ches_score](./centered_percentile_pair_experiments/Goodreads/summary_plots/ln_ches_score_errorbar.png).
 
 
 # HIT COUNT BIN
