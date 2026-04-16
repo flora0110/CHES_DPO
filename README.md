@@ -3,7 +3,7 @@
 ### seed 42
 SFT HR: 0.03
 ![HR line](./centered_percentile_pair_experiments/Goodreads/summary_results/plots/line/line_HR.png).
-![Hdelta_HRe](./centered_percentile_pair_experiments/Goodreads/summary_results/plots/line/delta_line_HR.png).
+<!-- ![Hdelta_HRe](./centered_percentile_pair_experiments/Goodreads/summary_results/plots/line/delta_line_HR.png). -->
 
 ![sequence_logprob_margin_errorbar](./centered_percentile_pair_experiments/Goodreads/summary_plots/sequence_logprob_margin_errorbar.png).
 
@@ -13,7 +13,7 @@ SFT HR: 0.03
 
 SFT HR: 0.023
 ![HR line](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/plots/line/line_HR.png).
-![delta_HR line](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/plots/line/delta_line_HR.png).
+<!-- ![delta_HR line](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/plots/line/delta_line_HR.png). -->
 
 ![sequence_logprob_margin_errorbar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed0/summary_plots/sequence_logprob_margin_errorbar.png).
 
@@ -23,7 +23,7 @@ SFT HR: 0.023
 ### seed 1
 SFT HR: 0.041
 ![HR line](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/plots/line/line_HR.png).
-![delta_HR line](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/plots/line/delta_line_HR.png).
+<!-- ![delta_HR line](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/plots/line/delta_line_HR.png). -->
 
 ![sequence_logprob_margin_errorbar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed1/summary_plots/sequence_logprob_margin_errorbar.png).
 
@@ -32,10 +32,73 @@ SFT HR: 0.041
 
 
 
-# HIT COUNT BIN
+### HIT COUNT BIN
 ![HitCount_bin](./centered_percentile_pair_experiments/Goodreads/Goodreads_HitCount_bin_lr_1e-6.png).
 ![HitCount_bin](./centered_percentile_experiments_4096_1000/Goodreads/seed0_Goodreads_HitCount_bin_lr_1e-6.png).
 ![HitCount_bin](./centered_percentile_experiments_4096_1000/Goodreads/seed1_Goodreads_HitCount_bin_lr_1e-6.png).
+
+### Training State
+#### chosen logits  percentile compare seed
+
+##### Using ln_ches score sampling
+![ln_ches_score_chosen_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/ln_ches_score_chosen_p_compare.png).
+##### Using sequence_logprob_margin sampling
+![sequence_logprob_margin_chosen_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/sequence_logprob_margin_chosen_p_compare.png).
+
+- Min ln ches確實可以避免 chosen下跌
+
+#### reward accuracies percentile compare seed 0
+##### Using ln_ches score sampling
+![ln_ches_score_accuracies_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/ln_ches_score_accuracies_p_compare.png).
+##### Using sequence_logprob_margin sampling
+![sequence_logprob_margin_accuracies_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/sequence_logprob_margin_accuracies_p_compare.png).
+
+
+#### loss percentile compare seed 0
+##### Using ln_ches score sampling
+![ln_ches_score_loss_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/ln_ches_score_loss_p_compare.png).
+##### Using sequence_logprob_margin sampling
+![sequence_logprob_margin_loss_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed0/sequence_logprob_margin_loss_p_compare.png).
+
+- 不同的sequence_logprob_margin 影響的是loss下降極限、acc震蕩程度（模型收斂程度）
+- 更大的sequence_logprob_margin （easy neg）收縮更快
+
+
+
+#### reward accuracies percentile compare seed 1
+##### Using ln_ches score sampling
+![ln_ches_score_chosen_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/ln_ches_score_chosen_p_compare.png).
+##### Using sequence_logprob_margin sampling
+![sequence_logprob_margin_chosen_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/sequence_logprob_margin_chosen_p_compare.png).
+
+
+#### reward accuracies percentile compare seed 1
+##### Using ln_ches score sampling
+![ln_ches_score_accuracies_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/ln_ches_score_accuracies_p_compare.png).
+##### Using sequence_logprob_margin sampling
+![sequence_logprob_margin_accuracies_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/sequence_logprob_margin_accuracies_p_compare.png).
+### Using avg_token_logprob_margin sampling
+![avg_token_logprob_margin_loss_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/avg_token_logprob_margin_accuracies_p_compare.png).
+
+
+#### loss percentile compare seed 1
+##### Using ln_ches score sampling
+![ln_ches_score_loss_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/ln_ches_score_loss_p_compare.png).
+##### Using sequence_logprob_margin sampling
+![sequence_logprob_margin_loss_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/sequence_logprob_margin_loss_p_compare.png).
+### Using avg_token_logprob_margin sampling
+![avg_token_logprob_margin_loss_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/avg_token_logprob_margin_loss_p_compare.png).
+
+## 另外一個點，目前兩種機率差都仍會受到長度差影響
+seed 0
+avg_token_logprob_margin_length_bar
+![avg_token_logprob_margin_length_bar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed0/summary_plots/avg_token_logprob_margin_length_bar.png).
+![sequence_logprob_margin_length_bar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed0/summary_plots/sequence_logprob_margin_length_bar.png).
+
+seed 1
+avg_token_logprob_margin_length_bar
+![avg_token_logprob_margin_length_bar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed1/summary_plots/avg_token_logprob_margin_length_bar.png).
+![sequence_logprob_margin_length_bar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed1/summary_plots/sequence_logprob_margin_length_bar.png).
 
 
 ## 0414

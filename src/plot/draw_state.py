@@ -3,12 +3,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 # 設定檔案名稱
-method = "Max_ln_ches_scores"
+method = "avg_token_logprob_margin"
 category = "Goodreads"
-it = 0
+# it = 0
+seed = 0
+p=0
 lr = "1e-6"
 # filename = f'models/SPRec/{category}_2048_{lr}_MAX_EPOCH{MAX_EPOCH}/it{it}/{method}/checkpoint-320/trainer_state.json'
-checkpoint_dir = f'./experiments_new/models/{category}_sftlr_0.00002_lr_{lr}/it{it}/{method}/checkpoint-256'
+# checkpoint_dir = f'./experiments_new/models/{category}_sftlr_0.00002_lr_{lr}/it{it}/{method}/checkpoint-256'
+checkpoint_dir = f"/data2/chuanhsin0110/CHES_DPO/centered_percentile_experiments_4096_1000/{category}/models/seed{seed}/{method}/p{p}/checkpoint-96"
 filename = f'{checkpoint_dir}/trainer_state.json'
 
 # filename = f'models/SPRec/{category}_2048_{lr}/it{it}/{method}/checkpoint-64/trainer_state.json'
