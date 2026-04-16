@@ -1,0 +1,17 @@
+{
+  "data_path": "./sampled_data/MovieLens_train.json",
+  "id2name_path": "./eval/MovieLens/id2name.json",
+  "model_path": "meta-llama/Llama-3.2-1B-Instruct",
+  "lora_path": "./experiments_new/models/SFT/MovieLens",
+  "random_seed": 42,
+  "window_size": 1024,
+  "percentiles": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "num_input_samples": 4096,
+  "num_valid_scored_pairs": 4096
+}

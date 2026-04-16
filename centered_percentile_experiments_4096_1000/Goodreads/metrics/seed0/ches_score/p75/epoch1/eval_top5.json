@@ -1,0 +1,36 @@
+[
+  {
+    "model": "./centered_percentile_experiments_4096_1000/Goodreads/predicts//seed0/ches_score/p75/epoch1/predicts.json",
+    "NDCG": [
+      0.018410571821520377
+    ],
+    "HR": [
+      0.023
+    ],
+    "diversity": [
+      554
+    ],
+    "DivRatio": 0.1108,
+    "ORRatio": 0.123
+  },
+  {
+    "model": "./centered_percentile_experiments_4096_1000/Goodreads/predicts//seed0/ches_score/p75/epoch1/predicts.json",
+    "category": "Goodreads",
+    "NDCG_head@5": 0.025617995988066987,
+    "HR_head@5": 0.03130755064456722,
+    "NDCG_tail@5": 0.009846827133479213,
+    "HR_tail@5": 0.01312910284463895,
+    "Count_Head": 543,
+    "Count_Tail": 457
+  },
+  {
+    "model": "epoch1",
+    "category": "Goodreads",
+    "topk": 5,
+    "GiniIndex": 0.989376889634658,
+    "num_recommended_unique": 554,
+    "total_recommendations": 5000,
+    "num_total_items": 13111,
+    "coverage": 0.04225459537792693
+  }
+]

@@ -41,8 +41,9 @@ def main(
     save_total_limit = None,
     metric_for_best_model = "eval_loss",
     greater_is_better = False,
+    beta: float = 0.1,
 ):
-
+    print("beta:", beta)
     save_run_script_content(sh_file_path, output_dir)
     # os.environ['WANDB_PROJECT'] = wandb_project
     
@@ -131,7 +132,7 @@ def main(
 
         # save_total_limit=1,
         load_best_model_at_end=True,
-        beta=0.1, # move beto from DPOTrainer to DPOConfig
+        beta=beta, # move beta from DPOTrainer to DPOConfig
         max_prompt_length=cutoff_len,
         max_length=cutoff_len,
     )

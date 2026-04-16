@@ -1,0 +1,70 @@
+[
+  {
+    "model": "./centered_percentile_experiments_4096_1000/Goodreads/predicts//seed0/ln_ches_score/p75/epoch2/predicts.json",
+    "NDCG": [
+      0.023553347682418003
+    ],
+    "HR": [
+      0.03
+    ],
+    "diversity": [
+      650
+    ],
+    "DivRatio": 0.13,
+    "ORRatio": 0.1088
+  },
+  {
+    "model": "./centered_percentile_experiments_4096_1000/Goodreads/predicts//seed0/ln_ches_score/p75/epoch2/predicts.json",
+    "category": "Goodreads",
+    "NDCG_head@5": 0.03345579166700453,
+    "HR_head@5": 0.040515653775322284,
+    "NDCG_tail@5": 0.011787424085852389,
+    "HR_tail@5": 0.0175054704595186,
+    "Count_Head": 543,
+    "Count_Tail": 457
+  },
+  {
+    "model": "epoch2",
+    "category": "Goodreads",
+    "topk": 5,
+    "GiniIndex": 0.9865304248341088,
+    "num_recommended_unique": 650,
+    "total_recommendations": 5000,
+    "num_total_items": 13111,
+    "coverage": 0.04957669132789261
+  },
+  {
+    "model": "./centered_percentile_experiments_4096_1000/Goodreads/predicts//seed0/ln_ches_score/p75/epoch2/predicts.json",
+    "NDCG": [
+      0.023553347682418003
+    ],
+    "HR": [
+      0.03
+    ],
+    "diversity": [
+      650
+    ],
+    "DivRatio": 0.13,
+    "ORRatio": 0.1088
+  },
+  {
+    "model": "./centered_percentile_experiments_4096_1000/Goodreads/predicts//seed0/ln_ches_score/p75/epoch2/predicts.json",
+    "category": "Goodreads",
+    "NDCG_head@5": 0.03345579166700453,
+    "HR_head@5": 0.040515653775322284,
+    "NDCG_tail@5": 0.011787424085852389,
+    "HR_tail@5": 0.0175054704595186,
+    "Count_Head": 543,
+    "Count_Tail": 457
+  },
+  {
+    "model": "epoch2",
+    "category": "Goodreads",
+    "topk": 5,
+    "GiniIndex": 0.9865304248341088,
+    "num_recommended_unique": 650,
+    "total_recommendations": 5000,
+    "num_total_items": 13111,
+    "coverage": 0.04957669132789261
+  }
+]
