@@ -90,14 +90,19 @@ SFT HR: 0.041
 ![avg_token_logprob_margin_loss_p_compare](./centered_percentile_experiments_4096_1000/Goodreads/summary_results/seed1/avg_token_logprob_margin_loss_p_compare.png).
 
 ## 另外一個點，目前兩種機率差都仍會受到長度差影響
-seed 0
-avg_token_logprob_margin_length_bar
+### seed 0
+
+#### avg_token_logprob_margin_length_bar
 ![avg_token_logprob_margin_length_bar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed0/summary_plots/avg_token_logprob_margin_length_bar.png).
+
+#### sequence_logprob_margin_length_bar
 ![sequence_logprob_margin_length_bar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed0/summary_plots/sequence_logprob_margin_length_bar.png).
 
-seed 1
-avg_token_logprob_margin_length_bar
+### seed 1
+
+#### avg_token_logprob_margin_length_bar
 ![avg_token_logprob_margin_length_bar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed1/summary_plots/avg_token_logprob_margin_length_bar.png).
+#### sequence_logprob_margin_length_bar
 ![sequence_logprob_margin_length_bar](./centered_percentile_experiments_4096_1000/Goodreads/centered_percentile_datasets/seed1/summary_plots/sequence_logprob_margin_length_bar.png).
 
 
