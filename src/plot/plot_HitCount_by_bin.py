@@ -404,8 +404,8 @@ if __name__ == "__main__":
     embeddings_path = f"./eval/{category}/embeddings.pt"
     sbert_model_path = "sentence-transformers/paraphrase-MiniLM-L3-v2"
     seed = 0
-    metric_for_sampling = "sequence_logprob_margin"
-    which_epoch = "epoch1"
+    metric_for_sampling = "ln_ches_score"  # "ln_ches_score", "sequence_logprob_margin"
+    which_epoch = "final"
     base_dir = f"./centered_percentile_experiments_4096_1000/{category}"
     train_json_path=f"{base_dir}/sampled_data/seed{seed}/train.json"
     output_path = f"{base_dir}/seed{seed}_{category}_{metric_for_sampling}_{which_epoch}_HitCount_bin_lr_{lr}.png"
